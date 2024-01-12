@@ -38,6 +38,8 @@ RUN pip install --no-cache-dir \
     rise==5.7.1 \
     ipyleaflet==0.17.2 \
     ipywidgets==8.0.4 \
+    # install variable inspector
+    lckr-jupyterlab-variableinspector==3.1.0 \
     # install spell checker
     jupyterlab-spellchecker==0.8.3 && \
     # fix permissions of conda
