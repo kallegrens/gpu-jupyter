@@ -13,14 +13,13 @@ services:
       NB_UID: ${JUPYTER_UID:-1000}
       NB_GID: ${JUPYTER_GID:-1000}
     # enable sudo permissions
-    user:
-      "root"
+    user: "root"
     networks:
       - default
       - $JUPYTER_NETWORK
     deploy:
       placement:
-        constraints: [node.hostname == $HOSTNAME]
+        constraints: [ node.hostname == $HOSTNAME ]
       replicas: 1
       update_config:
         parallelism: 2

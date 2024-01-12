@@ -8,7 +8,7 @@ services:
         reservations:
           devices:
             - capabilities:
-              - gpu
+                - gpu
     # # Set hardware limits: one GPU, max. 48GB RAM, max. 31 GPUs
     # deploy:
     #   resources:
@@ -30,6 +30,5 @@ services:
       NB_UID: ${JUPYTER_UID:-1000}
       NB_GID: ${JUPYTER_GID:-1000}
     # enable sudo permissions
-    user:
-      "root"
+    user: "root"
     restart: always
